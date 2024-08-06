@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    let option = prompt(`Calculate :
+        1. Area of Circle
+        2. Area of Rectangle
+        3. Prime or Composite
+        4. Sum of digits
+    `)
+
+    switch(option) {
+        case "1":
+            let radius = parseInt(prompt("Enter the radius of the circle : "))
+            document.write("Area : " + (22/7)*radius*radius)
+            break;
+        
+        case "2":
+            let length = parseInt(prompt("Enter the length of rectangle : "))
+            let breadth = parseInt(prompt("Enter the breadth of the rectangle : "))
+            document.write("Area : " + (length*breadth))
+            break;
+
+        case "3":
+            let Nummber = parseInt(prompt("Enter the number : "))
+            for (let i = 2; i <= Number/2; i++) {
+                if (Nummber % i == 0) {
+                    document.write("Number is a compositive Number.")
+                } else {
+                    document.write("Number is a Prime Number.")
+                }
+            }
+            break;
+
+        case "4":
+            let sum = 0;
+            let strNum = prompt("Enter the number: ")
+            for (let i = 0; i < strNum.length; i++) {
+                sum = sum + parseInt(strNum[i])
+            }
+            document.write(`${sum} is the sum of digits of number ${strNum}`)
+            break;
+
+        default:
+            document.write("Invalid Input")
+    }
+</script>
+</html>
