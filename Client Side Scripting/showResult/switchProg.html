@@ -13,6 +13,7 @@
         2. Area of Rectangle
         3. Prime or Composite
         4. Sum of digits
+        5. ForEach Example
     `)
 
     switch(option) {
@@ -46,6 +47,19 @@
             }
             document.write(`${sum} is the sum of digits of number ${strNum}`)
             break;
+
+        case "5":
+            let userInput = []
+            let detailsInfo = ["FName","LName", "Dob", "Address", "favFood","favSport", "favPerson", "petName","Hobby","favCountry"];
+            for (let i = 0; i < detailsInfo.length; i++) {
+                userInput[i]= prompt(`Enter your ${detailsInfo[i]}`)
+            }
+
+            userInput.push("Bishal")
+
+            userInput.forEach(item => document.write(item +  " , "))
+            break;
+
 
         default:
             document.write("Invalid Input")
